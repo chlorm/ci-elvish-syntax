@@ -1,0 +1,8 @@
+name: "ci-elvish-syntax"
+description: "Enforces valid Elvish syntax"
+branding:
+  icon: "check"
+  color: "green"
+runs:
+  using: "docker"
+  image: "Dockerfile"
