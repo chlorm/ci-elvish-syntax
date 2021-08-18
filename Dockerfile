@@ -1,6 +1,6 @@
 FROM golang:latest AS builder
 
-RUN go get -d -v github.com/elves/elvish
+RUN go get -d -v github.com/elves/elvish@latest
 RUN go install -v github.com/elves/elvish@latest
 
 FROM opensuse/leap:latest AS runner

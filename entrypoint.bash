@@ -14,6 +14,10 @@ for i in "${elvishFiles[@]}"; do
     if [ $? -gt 0 ]; then
         fail=1
     fi
+    capture="$(elvish -norc -deprecation-level 16 -compileonly "$i")"
+    if [ -n "$(grep -o 'deprecation:')" ]; then
+        fail=1
+    fi
     set -o errexit
 done
 
