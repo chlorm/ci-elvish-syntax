@@ -1,6 +1,5 @@
 FROM golang:latest AS builder
 
-RUN go get -d -v src.elv.sh/cmd/elvish
 RUN go install -v src.elv.sh/cmd/elvish@latest
 
 FROM opensuse/leap:latest AS runner
